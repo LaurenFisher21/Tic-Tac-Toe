@@ -4,7 +4,7 @@
 #include <time.h>
 
 char board[3][3];
-const char PLAYER = 'X';
+const char PLAYER = 'X'; // instead of string, char will do both char and strings
 const char COMP = 'O';
 
 void resetBoard();
@@ -49,7 +49,7 @@ int main()
         printBoard();
         printWinner(winner);
 
-        printf("\n Would you like to play again? (Y/N): ");
+        printf("\n Continue? (Y/N): ");
         scanf("%c");
         scanf("%c", &response);
         response = toupper(response);
@@ -76,7 +76,7 @@ void resetBoard()
 // printing a multidimentional array for the board
 void printBoard()
 {
-    printf(" %c | %c | %c ", board[0][0], board[0][1], board[0][2]); // %c is a placeholder
+    printf(" %c | %c | %c ", board[0][0], board[0][1], board[0][2]); // %c is a placeholder, %s is for string and %d is for numbers
     printf("\n---|---|---\n");
     printf(" %c | %c | %c ", board[1][0], board[1][1], board[1][2]);
     printf("\n---|---|---\n");
